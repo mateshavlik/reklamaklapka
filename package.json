@@ -1,0 +1,18 @@
+{
+  "name": "reklama-klapka-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Web reklamní agentury Reklama Klapka s.r.o.",
+  "scripts": {
+    "images": "node scripts/optimize-images.mjs",
+    "cutout": "node scripts/cutout-hero.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.2"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/outfit": "^5.2.8"
+  }
+}
