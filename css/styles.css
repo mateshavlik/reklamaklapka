@@ -433,12 +433,14 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .btn--phone span{display:none}
   .btn--phone{padding:.6rem;width:46px;height:46px}
 
-  .hero__inner{grid-template-columns:1fr;text-align:center}
+  .hero{padding-block:1.4rem clamp(2.6rem,6vw,4rem)}
+  .hero__inner{grid-template-columns:1fr;text-align:center;gap:1.2rem}
   .hero__eyebrow{margin-inline:auto}
   .hero__lead{margin-inline:auto}
   .hero__cta,.hero__trust{justify-content:center}
-  .hero__visual{order:-1;min-height:340px}
-  .hero__img{width:min(74%,360px)}
+  .hero__visual{order:-1;min-height:auto}
+  .hero__img{width:min(80%,400px)}
+  .hero__blob{inset:auto 0 4% 0;width:min(86%,420px)}
   .hero__logos{display:none}              /* loga referencí jen na desktopu */
 
   .trust__grid{grid-template-columns:1fr 1fr;gap:1.3rem}
@@ -459,14 +461,16 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .footer__grid{grid-template-columns:1fr;gap:1.6rem}
   .footer__bottom{flex-direction:column;text-align:center}
   .trust__grid{grid-template-columns:1fr}
-  .hero__trust{gap:1.1rem}
+  .hero__title{font-size:2.45rem;line-height:1.05}
+  .hero__trust{gap:1.4rem}
   .lightbox__nav{width:46px;height:46px;font-size:1.8rem}
 }
 
 @media (max-width:600px){
-  .hero__blob{width:min(82%,340px)}
-  .hero__img{width:min(72%,320px)}
-  .services-panel{padding:1.8rem 1.15rem}
+  .hero__img{width:min(88%,360px)}                /* maskotka jako výrazný portrét */
+  .hero__blob{inset:auto 0 5% 0;width:min(96%,380px)}
+  .hero__cta{flex-direction:column;width:100%;max-width:330px;margin-inline:auto;gap:.7rem}
+  .hero__cta .btn{width:100%}
 }
 
 /* =========================================================
