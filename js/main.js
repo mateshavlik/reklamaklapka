@@ -277,21 +277,33 @@
         if (firstBad) firstBad.focus();
         return;
       }
-      /* === PŘIPRAVENO NA BACKEND ===
-         Zde napojte odeslání. Příklady:
-         - Netlify Forms: přidejte na <form> atribut data-netlify="true" a níže fetch na '/';
-         - vlastní endpoint: fetch('/api/poptavka', { method:'POST', body:new FormData(form) })
-      */
+      /* === Odeslání přes Web3Forms (bez backendu) === */
       const btn = form.querySelector('button[type="submit"]');
       btn.disabled = true;
       status.textContent = 'Odesílám…';
       status.className = 'form__status';
-      setTimeout(() => {
-        form.reset();
-        btn.disabled = false;
-        status.textContent = 'Děkujeme! Vaši poptávku jsme přijali, brzy se vám ozveme.';
-        status.className = 'form__status is-ok';
-      }, 700);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            form.reset();
+            status.textContent = 'Děkujeme! Vaši poptávku jsme přijali, brzy se vám ozveme.';
+            status.className = 'form__status is-ok';
+          } else {
+            status.textContent = 'Odeslání se nezdařilo (' + (data.message || 'zkuste to prosím znovu') + '). Případně nám zavolejte.';
+            status.className = 'form__status is-err';
+          }
+        })
+        .catch(() => {
+          status.textContent = 'Odeslání se nezdařilo — zkontrolujte připojení, nebo nám prosím zavolejte.';
+          status.className = 'form__status is-err';
+        })
+        .finally(() => { btn.disabled = false; });
     });
   }
 

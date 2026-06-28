@@ -893,9 +893,15 @@
       </div>
 
       <div class="contact__form-wrap reveal">
-        <form class="form" id="contactForm" method="post" action="#" novalidate>
+        <form class="form" id="contactForm" method="post" action="https://api.web3forms.com/submit" novalidate>
+          <!-- ========== WEB3FORMS: sem vlož svůj Access Key z web3forms.com ========== -->
+          <input type="hidden" name="access_key" value="531ab0de-f77d-4403-b06c-954c07a60754">
+          <input type="hidden" name="subject" value="Nová poptávka z webu Reklama Klapka">
+          <input type="hidden" name="from_name" value="Web Reklama Klapka">
+          <!-- ========================================================================= -->
           <p class="form__hint">Vyplňte formulář a my se vám ozveme. Pole označená <span aria-hidden="true">*</span> jsou povinná.</p>
-          <!-- Honeypot proti spamu -->
+          <!-- Honeypoty proti spamu (Web3Forms botcheck + vlastní) -->
+          <input type="checkbox" name="botcheck" class="form__hp" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form__hp" aria-hidden="true"><label>Nevyplňujte<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
           <div class="form__row">
@@ -996,6 +1002,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=4" defer></script>
+<script src="js/main.js?v=5" defer></script>
 </body>
 </html>
