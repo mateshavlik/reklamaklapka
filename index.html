@@ -42,7 +42,7 @@
   <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/hero/hero-cutout.webp" as="image" fetchpriority="high">
 
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=7">
 
   <!-- ============ Schema.org — LocalBusiness ============ -->
   <script type="application/ld+json">
@@ -121,16 +121,13 @@
         <li><a href="#realizace" class="nav__link">Realizace</a></li>
         <li><a href="#o-nas" class="nav__link">O nás</a></li>
         <li><a href="#recenze" class="nav__link">Recenze</a></li>
+        <li><a href="#katalogy" class="nav__link">Katalogy</a></li>
         <li><a href="#kontakt" class="nav__link">Kontakt</a></li>
         <li><a href="https://cz.123rf.com/" target="_blank" rel="noopener" class="nav__link nav__link--ghost">Fotobanka</a></li>
       </ul>
     </nav>
 
     <div class="site-header__actions">
-      <a href="tel:+420603509926" class="btn btn--phone" aria-label="Zavolat 603 509 926">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>603 509 926</span>
-      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
@@ -243,7 +240,7 @@
       <article class="service-card reveal" data-filter="desky-fasady" tabindex="0" role="button" aria-label="Desky a fasády — zobrazit realizace">
         <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 11h.01M15 11h.01"/></svg></span>
         <h3>Desky a fasády</h3>
-        <p>Reklamní desky a cedule, velkoformátová grafika i reklama malovaná přímo na fasádu objektu.</p>
+        <p>Reklamní desky a cedule, velkoformátová grafika i reklama <strong>malovaná přímo na fasádu objektu</strong>.</p>
         <span class="service-card__more">Zobrazit realizace →</span>
       </article>
 
@@ -937,8 +934,31 @@
   </div>
 </section>
 
+<!-- ===================== KATALOGY ===================== -->
+<section class="section" id="katalogy">
+  <div class="container">
+    <header class="section__head reveal">
+      <p class="section__eyebrow">Katalogy</p>
+      <h2 class="section__title">Prohlédněte si nabídku reklamních předmětů</h2>
+      <p class="section__sub">Kompletní portfolio dárkových a reklamních předmětů si můžete projít v online katalozích.</p>
+    </header>
+    <div class="katalogy reveal">
+      <a class="katalog-card" href="https://klapka.katalogmagic.cz/" target="_blank" rel="noopener">
+        <span class="katalog-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3v5h5M8 13h8M8 17h5"/></svg></span>
+        <span class="katalog-card__body"><strong>Katalog Klapka</strong><span>Reklamní a dárkové předměty na míru</span></span>
+        <span class="katalog-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+      <a class="katalog-card" href="https://www.penmaster.eu/cz/" target="_blank" rel="noopener">
+        <span class="katalog-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></span>
+        <span class="katalog-card__body"><strong>Katalog PenMaster</strong><span>Široký sortiment reklamních předmětů</span></span>
+        <span class="katalog-card__arrow"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== KONTAKT ===================== -->
-<section class="section" id="kontakt">
+<section class="section section--alt" id="kontakt">
   <div class="container">
     <header class="section__head reveal">
       <p class="section__eyebrow">Kontakt</p>
@@ -1091,6 +1111,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=6" defer></script>
+<script src="js/main.js?v=7" defer></script>
 </body>
 </html>
