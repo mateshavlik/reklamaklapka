@@ -137,9 +137,9 @@
       if (target) target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
       applyFilter(cat);
     };
-    card.addEventListener('click', go);
+    card.addEventListener('click', e => { if (e.target.closest('a')) return; go(); }); // odkaz (katalog) nechá projít
     card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+      if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('a')) { e.preventDefault(); go(); }
     });
   });
 

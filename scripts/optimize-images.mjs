@@ -24,16 +24,17 @@ const GALLERY_OUT = path.join(OUT, 'gallery');
 
 // Pořadí + popisky dle zadání (filtry).
 const CATEGORIES = [
-  { dir: 'Auta',               slug: 'auta',        label: 'Auta',                 alt: 'Polep vozidla' },
-  { dir: 'Bannery',            slug: 'bannery',     label: 'Bannery',              alt: 'Reklamní banner' },
-  { dir: 'Dárkoviny',          slug: 'darkoviny',   label: 'Dárkoviny',            alt: 'Reklamní předmět' },
-  { dir: 'Fasády',             slug: 'fasady',      label: 'Fasády',               alt: 'Reklama na fasádě' },
-  { dir: 'Infosystémy',        slug: 'infosystemy', label: 'Informační systémy',   alt: 'Informační a orientační systém' },
-  { dir: 'Nástěnky do výroby', slug: 'nastenky',    label: 'Nástěnky',             alt: 'Firemní nástěnka' },
-  { dir: 'Polepy',             slug: 'polepy',      label: 'Polepy',               alt: 'Polep výlohy a plochy' },
-  { dir: 'Textil + papír',     slug: 'textil-papir',label: 'Textil + papír',       alt: 'Potisk textilu a tiskovin' },
-  { dir: 'Výlohy',             slug: 'vylohy',      label: 'Výlohy',               alt: 'Polep a grafika výlohy' },
-  { dir: '3D nápisy',          slug: '3d-napisy',   label: '3D nápisy',            alt: '3D nápis a prostorové logo' },
+  { dir: 'Auta',               slug: 'auta',           label: 'Auta',               alt: 'Polep vozidla' },
+  { dir: 'Bannery',            slug: 'bannery',        label: 'Bannery',            alt: 'Reklamní banner' },
+  { dir: 'Desky a fasády',     slug: 'desky-fasady',   label: 'Desky a fasády',     alt: 'Reklamní deska a malba na fasádě' },
+  { dir: 'Světelná reklama',   slug: 'svetelna-reklama',label: 'Světelná reklama',  alt: 'Světelná reklama' },
+  { dir: 'Polepy',             slug: 'polepy',         label: 'Polepy',             alt: 'Polep ploch a stěn' },
+  { dir: 'Výlohy',             slug: 'vylohy',         label: 'Výlohy',             alt: 'Polep a grafika výlohy' },
+  { dir: '3D nápisy',          slug: '3d-napisy',      label: '3D nápisy',          alt: '3D nápis a prostorové logo' },
+  { dir: 'Infosystémy',        slug: 'infosystemy',    label: 'Informační systémy', alt: 'Informační a orientační systém' },
+  { dir: 'Nástěnky do výroby', slug: 'nastenky',       label: 'Nástěnky',           alt: 'Firemní nástěnka' },
+  { dir: 'Textil + papír',     slug: 'textil-papir',   label: 'Textil + papír',     alt: 'Potisk textilu a tiskovin' },
+  { dir: 'Dárkoviny',          slug: 'darkoviny',      label: 'Dárkoviny',          alt: 'Reklamní předmět' },
 ];
 
 async function ensureDir(d) { await fs.mkdir(d, { recursive: true }); }

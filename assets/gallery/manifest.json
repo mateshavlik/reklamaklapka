@@ -86,7 +86,34 @@
     "thumb": "assets/gallery/auta/10-thumb.webp",
     "full": "assets/gallery/auta/10-full.webp",
     "w": 760,
+    "h": 428,
+    "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "auta",
+    "label": "Auta",
+    "thumb": "assets/gallery/auta/11-thumb.webp",
+    "full": "assets/gallery/auta/11-full.webp",
+    "w": 760,
     "h": 1013,
+    "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "auta",
+    "label": "Auta",
+    "thumb": "assets/gallery/auta/12-thumb.webp",
+    "full": "assets/gallery/auta/12-full.webp",
+    "w": 760,
+    "h": 427,
+    "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "auta",
+    "label": "Auta",
+    "thumb": "assets/gallery/auta/13-thumb.webp",
+    "full": "assets/gallery/auta/13-full.webp",
+    "w": 760,
+    "h": 570,
     "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -131,7 +158,7 @@
     "thumb": "assets/gallery/bannery/5-thumb.webp",
     "full": "assets/gallery/bannery/5-full.webp",
     "w": 760,
-    "h": 342,
+    "h": 1689,
     "alt": "Reklamní banner — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -140,170 +167,98 @@
     "thumb": "assets/gallery/bannery/6-thumb.webp",
     "full": "assets/gallery/bannery/6-full.webp",
     "w": 760,
-    "h": 342,
+    "h": 509,
     "alt": "Reklamní banner — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "bannery",
-    "label": "Bannery",
-    "thumb": "assets/gallery/bannery/7-thumb.webp",
-    "full": "assets/gallery/bannery/7-full.webp",
-    "w": 760,
-    "h": 1689,
-    "alt": "Reklamní banner — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "darkoviny",
-    "label": "Dárkoviny",
-    "thumb": "assets/gallery/darkoviny/1-thumb.webp",
-    "full": "assets/gallery/darkoviny/1-full.webp",
-    "w": 760,
-    "h": 343,
-    "alt": "Reklamní předmět — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "fasady",
-    "label": "Fasády",
-    "thumb": "assets/gallery/fasady/1-thumb.webp",
-    "full": "assets/gallery/fasady/1-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/1-thumb.webp",
+    "full": "assets/gallery/desky-fasady/1-full.webp",
     "w": 760,
     "h": 570,
-    "alt": "Reklama na fasádě — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "fasady",
-    "label": "Fasády",
-    "thumb": "assets/gallery/fasady/2-thumb.webp",
-    "full": "assets/gallery/fasady/2-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/2-thumb.webp",
+    "full": "assets/gallery/desky-fasady/2-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "Reklama na fasádě — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "fasady",
-    "label": "Fasády",
-    "thumb": "assets/gallery/fasady/3-thumb.webp",
-    "full": "assets/gallery/fasady/3-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/3-thumb.webp",
+    "full": "assets/gallery/desky-fasady/3-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "Reklama na fasádě — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/1-thumb.webp",
-    "full": "assets/gallery/infosystemy/1-full.webp",
-    "w": 760,
-    "h": 760,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/2-thumb.webp",
-    "full": "assets/gallery/infosystemy/2-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/4-thumb.webp",
+    "full": "assets/gallery/desky-fasady/4-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/3-thumb.webp",
-    "full": "assets/gallery/infosystemy/3-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/5-thumb.webp",
+    "full": "assets/gallery/desky-fasady/5-full.webp",
     "w": 760,
-    "h": 1689,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "h": 503,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/4-thumb.webp",
-    "full": "assets/gallery/infosystemy/4-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/6-thumb.webp",
+    "full": "assets/gallery/desky-fasady/6-full.webp",
     "w": 760,
-    "h": 342,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "h": 428,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/5-thumb.webp",
-    "full": "assets/gallery/infosystemy/5-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/7-thumb.webp",
+    "full": "assets/gallery/desky-fasady/7-full.webp",
     "w": 760,
-    "h": 570,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "h": 509,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/6-thumb.webp",
-    "full": "assets/gallery/infosystemy/6-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/8-thumb.webp",
+    "full": "assets/gallery/desky-fasady/8-full.webp",
     "w": 760,
-    "h": 342,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "h": 428,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/7-thumb.webp",
-    "full": "assets/gallery/infosystemy/7-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/9-thumb.webp",
+    "full": "assets/gallery/desky-fasady/9-full.webp",
     "w": 760,
-    "h": 570,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+    "h": 476,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "infosystemy",
-    "label": "Informační systémy",
-    "thumb": "assets/gallery/infosystemy/8-thumb.webp",
-    "full": "assets/gallery/infosystemy/8-full.webp",
-    "w": 760,
-    "h": 570,
-    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "nastenky",
-    "label": "Nástěnky",
-    "thumb": "assets/gallery/nastenky/1-thumb.webp",
-    "full": "assets/gallery/nastenky/1-full.webp",
-    "w": 760,
-    "h": 760,
-    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "nastenky",
-    "label": "Nástěnky",
-    "thumb": "assets/gallery/nastenky/2-thumb.webp",
-    "full": "assets/gallery/nastenky/2-full.webp",
+    "cat": "svetelna-reklama",
+    "label": "Světelná reklama",
+    "thumb": "assets/gallery/svetelna-reklama/1-thumb.webp",
+    "full": "assets/gallery/svetelna-reklama/1-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "nastenky",
-    "label": "Nástěnky",
-    "thumb": "assets/gallery/nastenky/3-thumb.webp",
-    "full": "assets/gallery/nastenky/3-full.webp",
-    "w": 760,
-    "h": 342,
-    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "nastenky",
-    "label": "Nástěnky",
-    "thumb": "assets/gallery/nastenky/4-thumb.webp",
-    "full": "assets/gallery/nastenky/4-full.webp",
-    "w": 760,
-    "h": 1350,
-    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "nastenky",
-    "label": "Nástěnky",
-    "thumb": "assets/gallery/nastenky/5-thumb.webp",
-    "full": "assets/gallery/nastenky/5-full.webp",
-    "w": 760,
-    "h": 342,
-    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "polepy",
@@ -312,7 +267,7 @@
     "full": "assets/gallery/polepy/1-full.webp",
     "w": 760,
     "h": 570,
-    "alt": "Polep výlohy a plochy — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Polep ploch a stěn — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "polepy",
@@ -321,7 +276,7 @@
     "full": "assets/gallery/polepy/2-full.webp",
     "w": 760,
     "h": 760,
-    "alt": "Polep výlohy a plochy — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Polep ploch a stěn — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "polepy",
@@ -330,34 +285,16 @@
     "full": "assets/gallery/polepy/3-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "Polep výlohy a plochy — realizace Reklama Klapka, Česká Lípa"
+    "alt": "Polep ploch a stěn — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "textil-papir",
-    "label": "Textil + papír",
-    "thumb": "assets/gallery/textil-papir/1-thumb.webp",
-    "full": "assets/gallery/textil-papir/1-full.webp",
+    "cat": "polepy",
+    "label": "Polepy",
+    "thumb": "assets/gallery/polepy/4-thumb.webp",
+    "full": "assets/gallery/polepy/4-full.webp",
     "w": 760,
-    "h": 570,
-    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "textil-papir",
-    "label": "Textil + papír",
-    "thumb": "assets/gallery/textil-papir/2-thumb.webp",
-    "full": "assets/gallery/textil-papir/2-full.webp",
-    "w": 760,
-    "h": 343,
-    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "textil-papir",
-    "label": "Textil + papír",
-    "thumb": "assets/gallery/textil-papir/3-thumb.webp",
-    "full": "assets/gallery/textil-papir/3-full.webp",
-    "w": 760,
-    "h": 428,
-    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
+    "h": 427,
+    "alt": "Polep ploch a stěn — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "vylohy",
@@ -493,5 +430,212 @@
     "w": 760,
     "h": 1013,
     "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "3d-napisy",
+    "label": "3D nápisy",
+    "thumb": "assets/gallery/3d-napisy/11-thumb.webp",
+    "full": "assets/gallery/3d-napisy/11-full.webp",
+    "w": 760,
+    "h": 428,
+    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "3d-napisy",
+    "label": "3D nápisy",
+    "thumb": "assets/gallery/3d-napisy/12-thumb.webp",
+    "full": "assets/gallery/3d-napisy/12-full.webp",
+    "w": 760,
+    "h": 1350,
+    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "3d-napisy",
+    "label": "3D nápisy",
+    "thumb": "assets/gallery/3d-napisy/13-thumb.webp",
+    "full": "assets/gallery/3d-napisy/13-full.webp",
+    "w": 760,
+    "h": 760,
+    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "3d-napisy",
+    "label": "3D nápisy",
+    "thumb": "assets/gallery/3d-napisy/14-thumb.webp",
+    "full": "assets/gallery/3d-napisy/14-full.webp",
+    "w": 760,
+    "h": 427,
+    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/1-thumb.webp",
+    "full": "assets/gallery/infosystemy/1-full.webp",
+    "w": 760,
+    "h": 760,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/2-thumb.webp",
+    "full": "assets/gallery/infosystemy/2-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/3-thumb.webp",
+    "full": "assets/gallery/infosystemy/3-full.webp",
+    "w": 760,
+    "h": 1689,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/4-thumb.webp",
+    "full": "assets/gallery/infosystemy/4-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/5-thumb.webp",
+    "full": "assets/gallery/infosystemy/5-full.webp",
+    "w": 760,
+    "h": 570,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/6-thumb.webp",
+    "full": "assets/gallery/infosystemy/6-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/7-thumb.webp",
+    "full": "assets/gallery/infosystemy/7-full.webp",
+    "w": 760,
+    "h": 570,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "infosystemy",
+    "label": "Informační systémy",
+    "thumb": "assets/gallery/infosystemy/8-thumb.webp",
+    "full": "assets/gallery/infosystemy/8-full.webp",
+    "w": 760,
+    "h": 570,
+    "alt": "Informační a orientační systém — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/1-thumb.webp",
+    "full": "assets/gallery/nastenky/1-full.webp",
+    "w": 760,
+    "h": 760,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/2-thumb.webp",
+    "full": "assets/gallery/nastenky/2-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/3-thumb.webp",
+    "full": "assets/gallery/nastenky/3-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/4-thumb.webp",
+    "full": "assets/gallery/nastenky/4-full.webp",
+    "w": 760,
+    "h": 1350,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/5-thumb.webp",
+    "full": "assets/gallery/nastenky/5-full.webp",
+    "w": 760,
+    "h": 342,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/6-thumb.webp",
+    "full": "assets/gallery/nastenky/6-full.webp",
+    "w": 760,
+    "h": 439,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "nastenky",
+    "label": "Nástěnky",
+    "thumb": "assets/gallery/nastenky/7-thumb.webp",
+    "full": "assets/gallery/nastenky/7-full.webp",
+    "w": 760,
+    "h": 1013,
+    "alt": "Firemní nástěnka — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "textil-papir",
+    "label": "Textil + papír",
+    "thumb": "assets/gallery/textil-papir/1-thumb.webp",
+    "full": "assets/gallery/textil-papir/1-full.webp",
+    "w": 760,
+    "h": 570,
+    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "textil-papir",
+    "label": "Textil + papír",
+    "thumb": "assets/gallery/textil-papir/2-thumb.webp",
+    "full": "assets/gallery/textil-papir/2-full.webp",
+    "w": 760,
+    "h": 343,
+    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "textil-papir",
+    "label": "Textil + papír",
+    "thumb": "assets/gallery/textil-papir/3-thumb.webp",
+    "full": "assets/gallery/textil-papir/3-full.webp",
+    "w": 760,
+    "h": 428,
+    "alt": "Potisk textilu a tiskovin — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "darkoviny",
+    "label": "Dárkoviny",
+    "thumb": "assets/gallery/darkoviny/1-thumb.webp",
+    "full": "assets/gallery/darkoviny/1-full.webp",
+    "w": 760,
+    "h": 343,
+    "alt": "Reklamní předmět — realizace Reklama Klapka, Česká Lípa"
   }
 ]
