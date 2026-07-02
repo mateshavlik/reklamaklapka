@@ -470,15 +470,21 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .lightbox__nav{width:46px;height:46px;font-size:1.8rem}
 }
 
-@media (max-width:600px){
-  .hero__inner{grid-template-columns:1fr 43%;column-gap:.8rem}
-  .hero__visual{max-width:175px}
-  .hero__title{font-size:clamp(1.5rem,1rem + 3vw,1.9rem);line-height:1.12;margin-bottom:.55rem}
-  .hero__lead{font-size:.92rem;margin-bottom:0}
-  .hero__cta{gap:.55rem;margin:1.1rem 0}
-  .hero__cta .btn{padding:.72rem 1.05rem;font-size:.92rem}
-  .hero__trust{gap:1.6rem}
-  .hero__trust strong{font-size:1.25rem}
+@media (max-width:768px){
+  /* HERO na mobilu: kompaktní vycentrovaný celek — nadpis → velká fotka → text → CTA */
+  .hero{padding-block:1.5rem clamp(2rem,6vw,3.5rem)}
+  .hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;max-width:480px;margin-inline:auto}
+  .hero__copy{display:contents}
+  .hero__title{order:1;font-size:clamp(1.6rem,1rem + 3vw,2.05rem);line-height:1.14;margin:0 0 .35rem}
+  .hero__visual{order:2;position:relative;width:min(82%,300px);max-width:none;min-height:auto;align-self:center;margin:0 0 .5rem}
+  .hero__visual::after{content:"";position:absolute;left:0;right:0;bottom:0;height:28%;background:linear-gradient(to bottom,rgba(251,244,244,0),var(--surface));pointer-events:none;z-index:4}
+  .hero__lead{order:3;font-size:.96rem;max-width:36ch;margin:0 auto 1.4rem}
+  .hero__cta{order:4;justify-content:center;gap:.7rem;margin-bottom:1.5rem}
+  .hero__cta .btn{padding:.8rem 1.4rem}
+  .hero__trust{order:5;justify-content:center;gap:2rem}
+  .hero__trust strong{font-size:1.3rem}
+  .hero__img{width:100%;margin:0;filter:none;-webkit-mask-image:none;mask-image:none}
+  .hero__blob{display:none}
 }
 
 /* =========================================================
