@@ -475,7 +475,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .hero{padding-block:1.5rem clamp(2rem,6vw,3.5rem)}
   .hero__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;max-width:480px;margin-inline:auto}
   .hero__copy{display:contents}
-  .hero__title{order:1;font-size:clamp(1.6rem,1rem + 3vw,2.05rem);line-height:1.14;margin:0 0 .35rem}
+  .hero__title{order:1;font-size:clamp(2.4rem,1rem + 7vw,3.4rem);line-height:1.06;margin:0 0 .4rem}
   .hero__visual{order:2;position:relative;width:min(82%,300px);max-width:none;min-height:auto;align-self:center;margin:0 0 .5rem}
   .hero__visual::after{content:"";position:absolute;left:0;right:0;bottom:0;height:28%;background:linear-gradient(to bottom,rgba(251,244,244,0),var(--surface));pointer-events:none;z-index:4}
   .hero__lead{order:3;font-size:.96rem;max-width:36ch;margin:0 auto 1.4rem}
@@ -485,6 +485,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .hero__trust strong{font-size:1.3rem}
   .hero__img{width:100%;margin:0;filter:none;-webkit-mask-image:none;mask-image:none}
   .hero__blob{display:none}
+  .hero__scroll{display:none}   /* skrytá šipka dolů na mobilu (překrývala text) */
 }
 
 /* =========================================================
