@@ -104,15 +104,6 @@
     "thumb": "assets/gallery/auta/12-thumb.webp",
     "full": "assets/gallery/auta/12-full.webp",
     "w": 760,
-    "h": 427,
-    "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "auta",
-    "label": "Auta",
-    "thumb": "assets/gallery/auta/13-thumb.webp",
-    "full": "assets/gallery/auta/13-full.webp",
-    "w": 760,
     "h": 570,
     "alt": "Polep vozidla — realizace Reklama Klapka, Česká Lípa"
   },
@@ -185,7 +176,7 @@
     "thumb": "assets/gallery/desky-fasady/2-thumb.webp",
     "full": "assets/gallery/desky-fasady/2-full.webp",
     "w": 760,
-    "h": 342,
+    "h": 343,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -203,7 +194,7 @@
     "thumb": "assets/gallery/desky-fasady/4-thumb.webp",
     "full": "assets/gallery/desky-fasady/4-full.webp",
     "w": 760,
-    "h": 342,
+    "h": 343,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -212,7 +203,7 @@
     "thumb": "assets/gallery/desky-fasady/5-thumb.webp",
     "full": "assets/gallery/desky-fasady/5-full.webp",
     "w": 760,
-    "h": 503,
+    "h": 342,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -221,7 +212,7 @@
     "thumb": "assets/gallery/desky-fasady/6-thumb.webp",
     "full": "assets/gallery/desky-fasady/6-full.webp",
     "w": 760,
-    "h": 428,
+    "h": 342,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -230,7 +221,7 @@
     "thumb": "assets/gallery/desky-fasady/7-thumb.webp",
     "full": "assets/gallery/desky-fasady/7-full.webp",
     "w": 760,
-    "h": 509,
+    "h": 503,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
@@ -248,17 +239,26 @@
     "thumb": "assets/gallery/desky-fasady/9-thumb.webp",
     "full": "assets/gallery/desky-fasady/9-full.webp",
     "w": 760,
-    "h": 476,
+    "h": 509,
     "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "svetelna-reklama",
-    "label": "Světelná reklama",
-    "thumb": "assets/gallery/svetelna-reklama/1-thumb.webp",
-    "full": "assets/gallery/svetelna-reklama/1-full.webp",
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/10-thumb.webp",
+    "full": "assets/gallery/desky-fasady/10-full.webp",
     "w": 760,
-    "h": 342,
-    "alt": "Světelná reklama — realizace Reklama Klapka, Česká Lípa"
+    "h": 428,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "desky-fasady",
+    "label": "Desky a fasády",
+    "thumb": "assets/gallery/desky-fasady/11-thumb.webp",
+    "full": "assets/gallery/desky-fasady/11-full.webp",
+    "w": 760,
+    "h": 476,
+    "alt": "Reklamní deska a malba na fasádě — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "polepy",
@@ -324,148 +324,139 @@
     "alt": "Polep a grafika výlohy — realizace Reklama Klapka, Česká Lípa"
   },
   {
-    "cat": "vylohy",
-    "label": "Výlohy",
-    "thumb": "assets/gallery/vylohy/4-thumb.webp",
-    "full": "assets/gallery/vylohy/4-full.webp",
-    "w": 760,
-    "h": 343,
-    "alt": "Polep a grafika výlohy — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
-    "cat": "vylohy",
-    "label": "Výlohy",
-    "thumb": "assets/gallery/vylohy/5-thumb.webp",
-    "full": "assets/gallery/vylohy/5-full.webp",
-    "w": 760,
-    "h": 343,
-    "alt": "Polep a grafika výlohy — realizace Reklama Klapka, Česká Lípa"
-  },
-  {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/1-thumb.webp",
     "full": "assets/gallery/3d-napisy/1-full.webp",
     "w": 760,
     "h": 570,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/2-thumb.webp",
     "full": "assets/gallery/3d-napisy/2-full.webp",
     "w": 760,
     "h": 570,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/3-thumb.webp",
     "full": "assets/gallery/3d-napisy/3-full.webp",
     "w": 760,
     "h": 570,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/4-thumb.webp",
     "full": "assets/gallery/3d-napisy/4-full.webp",
     "w": 760,
     "h": 760,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/5-thumb.webp",
     "full": "assets/gallery/3d-napisy/5-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/6-thumb.webp",
     "full": "assets/gallery/3d-napisy/6-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/7-thumb.webp",
     "full": "assets/gallery/3d-napisy/7-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/8-thumb.webp",
     "full": "assets/gallery/3d-napisy/8-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/9-thumb.webp",
     "full": "assets/gallery/3d-napisy/9-full.webp",
     "w": 760,
     "h": 342,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/10-thumb.webp",
     "full": "assets/gallery/3d-napisy/10-full.webp",
     "w": 760,
-    "h": 1013,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "h": 342,
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/11-thumb.webp",
     "full": "assets/gallery/3d-napisy/11-full.webp",
     "w": 760,
-    "h": 428,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "h": 1013,
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/12-thumb.webp",
     "full": "assets/gallery/3d-napisy/12-full.webp",
     "w": 760,
-    "h": 1350,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "h": 428,
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/13-thumb.webp",
     "full": "assets/gallery/3d-napisy/13-full.webp",
     "w": 760,
-    "h": 760,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "h": 1350,
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "3d-napisy",
-    "label": "3D nápisy",
+    "label": "3D a světelné reklamy",
     "thumb": "assets/gallery/3d-napisy/14-thumb.webp",
     "full": "assets/gallery/3d-napisy/14-full.webp",
     "w": 760,
+    "h": 760,
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
+  },
+  {
+    "cat": "3d-napisy",
+    "label": "3D a světelné reklamy",
+    "thumb": "assets/gallery/3d-napisy/15-thumb.webp",
+    "full": "assets/gallery/3d-napisy/15-full.webp",
+    "w": 760,
     "h": 427,
-    "alt": "3D nápis a prostorové logo — realizace Reklama Klapka, Česká Lípa"
+    "alt": "3D nápis a světelná reklama — realizace Reklama Klapka, Česká Lípa"
   },
   {
     "cat": "infosystemy",
