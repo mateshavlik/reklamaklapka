@@ -133,7 +133,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 .brand:hover .brand__logo{transform:scale(1.04)}
 
 .nav__list{display:flex;align-items:center;gap:.35rem}
-.nav__link{position:relative;display:inline-block;padding:.55rem .85rem;font-weight:500;color:var(--ink-2);transition:color .2s var(--ease)}
+.nav__link{position:relative;display:inline-block;padding:.55rem .85rem;font-weight:500;color:var(--ink-2);white-space:nowrap;transition:color .2s var(--ease)}
 .nav__link::after{content:"";position:absolute;left:.85rem;right:.85rem;bottom:.3rem;height:2px;background:var(--brand);border-radius:2px;transform:scaleX(0);transform-origin:left center;transition:transform .32s var(--ease)}
 .nav__link:hover{color:var(--ink)}
 .nav__link:hover::after{transform:scaleX(1)}
