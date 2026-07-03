@@ -92,7 +92,7 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:800;line-height:1.1;letter-
 section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 
 .section__head{max-width:680px;margin:0 auto clamp(2.2rem,5vw,3.4rem);text-align:center}
-.section__eyebrow{display:inline-block;font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem}
+.section__eyebrow{display:inline-block;font-family:var(--font-head);font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:.7rem;white-space:nowrap}
 .section__title{font-size:clamp(1.85rem,1.2rem + 2.6vw,2.9rem)}
 .section__sub{margin-top:.9rem;color:var(--ink-2);font-size:1.075rem}
 
