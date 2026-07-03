@@ -9,8 +9,6 @@
   const blockVolne = $('blockVolne'), blockObsazene = $('blockObsazene');
   const gridVolne = $('gridVolne'), gridObsazene = $('gridObsazene');
 
-  const EMAIL = window.KLAPKA_EMAIL || 'info@reklamaklapka.cz';
-
   function show(el, on) { if (el) el.hidden = !on; }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
 
@@ -40,10 +38,12 @@
     return arr;
   }
   function zajemHref(p) {
-    const subj = 'Zájem o reklamní plochu: ' + (p.nazev || '');
-    const body = 'Dobrý den,\n\nmám zájem o reklamní plochu „' + (p.nazev || '') + '"'
-      + (p.adresa ? ' (' + p.adresa + ')' : '') + '.\n\nProsím o více informací.\n\nDěkuji,\n';
-    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    // Přesměrování na poptávkový formulář s předvyplněnými údaji o ploše.
+    const q = new URLSearchParams();
+    q.set('plocha', p.nazev || '');
+    if (p.adresa) q.set('adresa', p.adresa);
+    if (p.rozmery) q.set('rozmery', p.rozmery);
+    return 'index.html?' + q.toString() + '#kontakt';
   }
 
   function cardHtml(p, idx) {

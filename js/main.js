@@ -237,6 +237,26 @@
   const form = document.getElementById('contactForm');
   if (form) {
     const status = document.getElementById('formStatus');
+
+    /* Předvyplnění z „Mám zájem" na Volných plochách (?plocha=…&adresa=…&rozmery=…) */
+    try {
+      const params = new URLSearchParams(location.search);
+      const plocha = params.get('plocha');
+      if (plocha) {
+        const msg = form.elements['message'];
+        if (msg && !msg.value.trim()) {
+          const adresa = params.get('adresa');
+          const rozmery = params.get('rozmery');
+          msg.value = 'Dobrý den,\n\nmám zájem o reklamní plochu „' + plocha + '"'
+            + (adresa ? ' (' + adresa + ')' : '')
+            + (rozmery ? ', rozměry ' + rozmery : '')
+            + '.\n\nProsím o více informací a cenovou nabídku.';
+        }
+        // Plynulé odscrolování k formuláři (i když je v URL #kontakt)
+        setTimeout(() => form.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+      }
+    } catch (e) { /* URLSearchParams nepodporováno — ignorovat */ }
+
     const setError = (field, msg) => {
       const wrap = field.closest('.form__field');
       const err = $('.form__error', wrap);
