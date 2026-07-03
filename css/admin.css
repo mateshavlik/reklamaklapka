@@ -1,0 +1,80 @@
+/* ============================================================
+   Administrace ploch (navazuje na css/styles.css)
+   ============================================================ */
+.admin{background:var(--surface);min-height:100vh}
+
+.adminbar{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm)}
+.adminbar__inner{max-width:1000px;margin-inline:auto;display:flex;align-items:center;gap:1rem;padding:.7rem clamp(1rem,4vw,1.5rem)}
+.adminbar__title{font-family:var(--font-head);font-weight:700;color:var(--ink)}
+.adminbar__right{margin-left:auto;display:flex;align-items:center;gap:.8rem}
+.adminbar__user{font-size:.9rem;color:var(--muted)}
+.adminbar .btn--outline{padding:.5rem 1rem;font-size:.9rem}
+
+.admin__main{max-width:1000px;margin-inline:auto;padding:clamp(1.5rem,4vw,2.5rem) clamp(1rem,4vw,1.5rem)}
+
+/* Login */
+.login{display:grid;place-items:center;min-height:70vh}
+.login__card{width:100%;max-width:420px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:clamp(1.6rem,4vw,2.4rem);display:flex;flex-direction:column;gap:1rem}
+.login__card h1{font-size:1.5rem}
+.login__hint{color:var(--muted);font-size:.92rem;margin-top:-.4rem}
+.login__error{color:var(--brand);font-weight:600;font-size:.9rem;min-height:1em}
+
+/* Formulářová pole (sdílené) */
+.afield{display:flex;flex-direction:column;gap:.35rem}
+.afield>span{font-family:var(--font-head);font-weight:600;font-size:.9rem}
+.afield>span small{font-weight:500;color:var(--muted)}
+.afield input[type=text],.afield input[type=email],.afield input[type=password],.afield textarea,.afield select{width:100%;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--bg-alt);border:1.5px solid var(--line);border-radius:12px;padding:.72rem .9rem;transition:border-color .2s,box-shadow .2s,background .2s}
+.afield textarea{resize:vertical;min-height:80px}
+.afield input:focus,.afield textarea:focus,.afield select:focus{outline:none;border-color:var(--brand);background:#fff;box-shadow:0 0 0 4px var(--brand-soft)}
+.afield-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.afield--check{flex-direction:row;align-items:center;gap:.5rem;align-self:end;padding:.5rem 0}
+.afield--check input{width:18px;height:18px;accent-color:var(--brand)}
+
+/* Toolbar + list */
+.admin__toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+.admin__toolbar h1{font-size:clamp(1.5rem,3vw,2rem)}
+.admin__note{color:var(--muted);font-size:.92rem;min-height:1.2em;margin-bottom:.6rem}
+
+.admin__list{display:flex;flex-direction:column;gap:.7rem}
+.arow{display:grid;grid-template-columns:64px 1fr auto auto;align-items:center;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.7rem .9rem;box-shadow:var(--shadow-sm)}
+.arow.is-hidden{opacity:.55}
+.arow__thumb{width:64px;height:48px;border-radius:9px;overflow:hidden;background:var(--surface-2);display:grid;place-items:center;color:var(--muted)}
+.arow__thumb img{width:100%;height:100%;object-fit:cover}
+.arow__info{display:flex;flex-direction:column;min-width:0}
+.arow__info strong{font-family:var(--font-head);font-size:1rem}
+.arow__info span{font-size:.86rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip{font-family:var(--font-head);font-weight:700;font-size:.8rem;padding:.35rem .8rem;border-radius:var(--pill);color:#fff;cursor:pointer}
+.chip--free{background:#1a8a3c}
+.chip--taken{background:var(--ink-2)}
+.arow__actions{display:flex;gap:.3rem}
+.iconbtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:1rem;cursor:pointer;transition:background .2s,border-color .2s}
+.iconbtn:hover{background:var(--surface-2);border-color:var(--brand)}
+.iconbtn--danger:hover{background:var(--brand-soft);border-color:var(--brand)}
+
+/* Editor modal */
+.editor{position:fixed;inset:0;z-index:100;background:rgba(18,17,20,.55);display:flex;align-items:flex-start;justify-content:center;padding:clamp(1rem,4vw,3rem);overflow-y:auto}
+.editor__panel{width:100%;max-width:640px;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)}
+.editor__head{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}
+.editor__head h2{font-size:1.3rem}
+.editor__close{width:40px;height:40px;font-size:1.8rem;line-height:1;color:var(--ink-2);background:none;cursor:pointer}
+.editor__body{padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
+.editor__actions{display:flex;justify-content:flex-end;gap:.7rem;margin-top:.4rem}
+.editor__error{color:var(--brand);font-weight:600;font-size:.9rem;min-height:1em;text-align:right}
+
+/* Uploader fotek */
+.uploader{border:1.5px dashed var(--line);border-radius:14px;padding:1rem;background:var(--bg-alt)}
+.uploader__grid{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:.7rem}
+.uploader__grid:empty{margin-bottom:0}
+.pchip{position:relative;width:96px;height:74px;border-radius:10px;overflow:hidden;border:2px solid transparent;box-shadow:var(--shadow-sm)}
+.pchip.is-cover{border-color:var(--brand)}
+.pchip img{width:100%;height:100%;object-fit:cover}
+.pchip__cover{position:absolute;left:0;bottom:0;right:0;font-size:.68rem;font-weight:700;text-align:center;padding:.15rem;background:rgba(228,6,21,.9);color:#fff;border:none;cursor:pointer}
+.pchip__set{background:rgba(18,17,20,.7)}
+.pchip__del{position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:rgba(18,17,20,.75);color:#fff;font-size:1rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.uploader__add{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-head);font-weight:700;font-size:.92rem;color:var(--brand);background:var(--brand-soft);padding:.6rem 1rem;border-radius:var(--pill);cursor:pointer}
+
+@media (max-width:640px){
+  .afield-row{grid-template-columns:1fr}
+  .arow{grid-template-columns:52px 1fr;grid-template-areas:'thumb info' 'status actions';row-gap:.6rem}
+  .arow__thumb{grid-area:thumb}.arow__info{grid-area:info}.arow__status{grid-area:status}.arow__actions{grid-area:actions;justify-content:flex-end}
+}

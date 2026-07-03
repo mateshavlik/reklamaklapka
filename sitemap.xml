@@ -11,4 +11,9 @@
       <image:title>Reklama Klapka — výroba reklamy Česká Lípa</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.reklamaklapka.cz/volne-plochy.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

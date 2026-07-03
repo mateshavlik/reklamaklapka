@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#E40615">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Administrace ploch — Reklama Klapka</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/admin.css?v=1">
+</head>
+<body class="admin">
+
+<header class="adminbar">
+  <div class="adminbar__inner">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Reklama Klapka" height="34"></a>
+    <span class="adminbar__title">Administrace ploch</span>
+    <div class="adminbar__right">
+      <span class="adminbar__user" id="userEmail" hidden></span>
+      <button class="btn btn--outline" id="logoutBtn" hidden type="button">Odhlásit</button>
+    </div>
+  </div>
+</header>
+
+<main class="admin__main">
+
+  <!-- Přihlášení -->
+  <section class="login" id="loginView">
+    <form class="login__card" id="loginForm">
+      <h1>Přihlášení do administrace</h1>
+      <p class="login__hint">Přístup pouze pro správce reklamních ploch.</p>
+      <label class="afield"><span>E‑mail</span><input type="email" id="loginEmail" required autocomplete="username" placeholder="vas@email.cz"></label>
+      <label class="afield"><span>Heslo</span><input type="password" id="loginPassword" required autocomplete="current-password" placeholder="••••••••"></label>
+      <button class="btn btn--primary btn--lg btn--block" type="submit" id="loginBtn">Přihlásit se</button>
+      <p class="login__error" id="loginError" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Administrace -->
+  <section class="admin__panel" id="adminView" hidden>
+    <div class="admin__toolbar">
+      <h1>Reklamní plochy</h1>
+      <button class="btn btn--primary" id="addBtn" type="button">+ Přidat plochu</button>
+    </div>
+    <p class="admin__note" id="adminMsg" role="status"></p>
+    <div class="admin__list" id="list"></div>
+  </section>
+</main>
+
+<!-- Editor (modal) -->
+<div class="editor" id="editor" hidden>
+  <div class="editor__panel" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
+    <div class="editor__head">
+      <h2 id="editorTitle">Nová plocha</h2>
+      <button class="editor__close" id="editorClose" type="button" aria-label="Zavřít">&times;</button>
+    </div>
+    <form class="editor__body" id="editorForm">
+      <input type="hidden" id="fId">
+      <label class="afield"><span>Název *</span><input type="text" id="fNazev" required placeholder="Billboard Dubická"></label>
+      <div class="afield-row">
+        <label class="afield"><span>Adresa</span><input type="text" id="fAdresa" placeholder="Dubická 991, Česká Lípa"></label>
+        <label class="afield"><span>Rozměry</span><input type="text" id="fRozmery" placeholder="6 × 3 m"></label>
+      </div>
+      <label class="afield"><span>GPS nebo odkaz na mapu</span><input type="text" id="fGps" placeholder="50.681,14.531 nebo https://maps…"></label>
+      <label class="afield"><span>Popis</span><textarea id="fPopis" rows="3" placeholder="Krátký popis plochy, viditelnost, frekvence…"></textarea></label>
+      <div class="afield-row">
+        <label class="afield"><span>Stav</span>
+          <select id="fStav"><option value="volna">Volná</option><option value="obsazena">Obsazená</option></select>
+        </label>
+        <label class="afield afield--check"><input type="checkbox" id="fPripnuta"><span>Připnout nahoru 📌</span></label>
+        <label class="afield afield--check"><input type="checkbox" id="fSkryta"><span>Skrýt z webu 👁️</span></label>
+      </div>
+
+      <div class="afield">
+        <span>Fotografie <small>(první = hlavní / titulní)</small></span>
+        <div class="uploader">
+          <div class="uploader__grid" id="photoGrid"></div>
+          <label class="uploader__add">
+            <input type="file" id="fileInput" accept="image/*" multiple hidden>
+            <span id="uploadLabel">+ Nahrát fotky</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="editor__actions">
+        <button class="btn btn--outline" type="button" id="editorCancel">Zrušit</button>
+        <button class="btn btn--primary" type="submit" id="saveBtn">Uložit</button>
+      </div>
+      <p class="editor__error" id="editorError" role="alert"></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/supabase-config.js?v=2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/admin.js?v=1" defer></script>
+</body>
+</html>
