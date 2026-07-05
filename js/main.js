@@ -365,34 +365,42 @@
     // barevná paleta – echo písmen na tváři modelky
     const COLORS = ['#E40615', '#2b3a8f', '#1f9d61', '#e8a11c', '#8a2be2', '#e6357a', '#12a5b0', '#f2662d'];
     const ANIMS = ['glyDriftA', 'glyDriftB', 'glyDriftC', 'glyDriftD', 'glyDriftE', 'glyDriftF'];
-    const COUNT = 55;        // po celém hero – i za textem a modelkou (vrstva je pod obsahem)
+    // pevné počty na vodorovné zóny (stabilní poměr při každém načtení):
+    // levá jen mírně míň než dřív, pravá výrazně plnější – hlavně daleko vpravo (viditelný karamel)
+    const ZONES = [
+      { n: 22, min: -2.5, max: 46 },  // levá
+      { n: 14, min: 47, max: 80 },    // střed-pravá (část za modelkou)
+      { n: 24, min: 80, max: 99 },    // daleko vpravo
+    ];
 
     const rnd = (a, b) => a + Math.random() * (b - a);
     const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+
+    function makeGlyph(xMin, xMax) {
+      const size = rnd(24, 122);
+      const g = document.createElement('span');
+      g.className = 'gly';
+      g.textContent = pick(CHARS);
+      g.style.left = rnd(xMin, xMax).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
+      g.style.top = rnd(-3, 95).toFixed(2) + '%';
+      g.style.fontSize = Math.round(size) + 'px';
+      g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
+      g.style.color = pick(COLORS);
+      g.style.opacity = rnd(0.10, 0.24).toFixed(2);      // za textem/modelkou raději jemnější
+      g.style.filter = 'blur(' + rnd(0.3, 1.5).toFixed(1) + 'px)';
+      if (!reduceMotion) {
+        g.style.animationName = pick(ANIMS);
+        g.style.animationDuration = Math.round(rnd(7, 18)) + 's';
+        g.style.animationDelay = '-' + Math.round(rnd(0, 30)) + 's';
+      }
+      return g;
+    }
 
     function build() {
       layer.innerHTML = '';
       if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
       const frag = document.createDocumentFragment();
-      for (let i = 0; i < COUNT; i++) {
-        const size = rnd(24, 122);
-        const g = document.createElement('span');
-        g.className = 'gly';
-        g.textContent = pick(CHARS);
-        g.style.left = rnd(-2.5, 97).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
-        g.style.top = rnd(-3, 95).toFixed(2) + '%';
-        g.style.fontSize = Math.round(size) + 'px';
-        g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
-        g.style.color = pick(COLORS);
-        g.style.opacity = rnd(0.10, 0.24).toFixed(2);    // za textem/modelkou raději jemnější
-        g.style.filter = 'blur(' + rnd(0.3, 1.5).toFixed(1) + 'px)';
-        if (!reduceMotion) {
-          g.style.animationName = pick(ANIMS);
-          g.style.animationDuration = Math.round(rnd(7, 18)) + 's';
-          g.style.animationDelay = '-' + Math.round(rnd(0, 30)) + 's';
-        }
-        frag.appendChild(g);
-      }
+      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z.min, z.max)); });
       layer.appendChild(frag);
     }
 
