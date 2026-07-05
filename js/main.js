@@ -368,23 +368,25 @@
     // pevné počty na vodorovné zóny (stabilní poměr při každém načtení):
     // levá 65 % tlačená spíš dolů, střed doplněný z pravé strany, pravá plnější
     const ZONES = [
-      { n: 22, min: -2.5, max: 46, lowFrac: 0.65 },  // levá – 65 % spíš níž
-      { n: 3, min: 40, max: 62 },                     // střed – doplnit prázdná místa (přesun zprava)
-      { n: 14, min: 47, max: 80 },                    // střed-pravá (část za modelkou)
-      { n: 21, min: 80, max: 99 },                    // daleko vpravo (−3 přesunuty do středu)
+      { n: 22, min: -2.5, max: 46, lowFrac: 0.65 },       // levá – 65 % spíš níž
+      { n: 11, min: 42, max: 64, yMin: 0, yMax: 60 },     // střed mezi nadpisem a hlavou – víc glyfů, spíš horní část
+      { n: 14, min: 47, max: 80 },                        // střed-pravá (část za modelkou)
+      { n: 21, min: 80, max: 99 },                        // daleko vpravo
     ];
 
     const rnd = (a, b) => a + Math.random() * (b - a);
     const pick = (arr) => arr[(Math.random() * arr.length) | 0];
 
-    function makeGlyph(xMin, xMax, lowFrac) {
+    function makeGlyph(z) {
       const size = rnd(24, 122);
       const g = document.createElement('span');
       g.className = 'gly';
       g.textContent = pick(CHARS);
-      g.style.left = rnd(xMin, xMax).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
-      // část zóny lze zatlačit spíš k dolní části hero
-      const top = (lowFrac && Math.random() < lowFrac) ? rnd(45, 95) : rnd(-3, 95);
+      g.style.left = rnd(z.min, z.max).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
+      // svislé umístění: volitelný rozsah zóny, nebo tlačit spíš dolů (lowFrac)
+      const yMin = z.yMin != null ? z.yMin : -3;
+      const yMax = z.yMax != null ? z.yMax : 95;
+      const top = (z.lowFrac && Math.random() < z.lowFrac) ? rnd(45, 95) : rnd(yMin, yMax);
       g.style.top = top.toFixed(2) + '%';
       g.style.fontSize = Math.round(size) + 'px';
       g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
@@ -403,7 +405,7 @@
       layer.innerHTML = '';
       if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
       const frag = document.createDocumentFragment();
-      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z.min, z.max, z.lowFrac)); });
+      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z)); });
       layer.appendChild(frag);
     }
 
