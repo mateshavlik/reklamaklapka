@@ -365,63 +365,35 @@
     // barevná paleta – echo písmen na tváři modelky
     const COLORS = ['#E40615', '#2b3a8f', '#1f9d61', '#e8a11c', '#8a2be2', '#e6357a', '#12a5b0', '#f2662d'];
     const ANIMS = ['glyDriftA', 'glyDriftB', 'glyDriftC', 'glyDriftD', 'glyDriftE', 'glyDriftF'];
-    const COUNT = 34;        // cílový počet (kolik se bezpečně vejde)
-    const MOTION = 28;       // max posun animace v ose (px) – musí sedět s keyframes
-    const OBST_PAD = 16 + MOTION; // rezerva kolem obsahu i pro pohyb
+    const COUNT = 55;        // po celém hero – i za textem a modelkou (vrstva je pod obsahem)
 
     const rnd = (a, b) => a + Math.random() * (b - a);
     const pick = (arr) => arr[(Math.random() * arr.length) | 0];
 
-    function obstacles() {
-      const h = hero.getBoundingClientRect();
-      const out = [];
-      ['.hero__title', '.hero__lead', '.hero__cta', '.hero__trust', '.hero__img'].forEach((s) => {
-        const el = hero.querySelector(s);
-        if (!el) return;
-        const r = el.getBoundingClientRect();
-        out.push({ l: r.left - h.left - OBST_PAD, t: r.top - h.top - OBST_PAD, r: r.right - h.left + OBST_PAD, b: r.bottom - h.top + OBST_PAD });
-      });
-      return { W: h.width, H: h.height, obst: out };
-    }
-    const overlaps = (b, list) => list.some((o) => b.l < o.r && b.r > o.l && b.t < o.b && b.b > o.t);
-
     function build() {
       layer.innerHTML = '';
       if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
-      const { W, H, obst } = obstacles();
-      const placed = [];
-      let made = 0, guard = 0;
-      while (made < COUNT && guard < COUNT * 45) {
-        guard++;
-        const size = rnd(28, 120);
-        // štědrý odhad boxu (počítá i s rotací až ±24° → box se zvětší) → jistá rezerva od obsahu
-        const gw = size * 1.12, gh = size * 1.28;
-        const x = rnd(0, Math.max(1, W - gw));
-        const y = rnd(0, Math.max(1, H - gh));
-        const box = { l: x, t: y, r: x + gw, b: y + gh };
-        if (overlaps(box, obst)) continue;
-        const cx = x + gw / 2, cy = y + gh / 2;
-        if (placed.some((p) => Math.abs(p.cx - cx) < 20 && Math.abs(p.cy - cy) < 20)) continue; // ať se nekupí přesně na sobě
-        placed.push({ cx, cy });
-
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < COUNT; i++) {
+        const size = rnd(24, 122);
         const g = document.createElement('span');
         g.className = 'gly';
         g.textContent = pick(CHARS);
-        g.style.left = (x / W * 100).toFixed(2) + '%';
-        g.style.top = (y / H * 100).toFixed(2) + '%';
+        g.style.left = rnd(-2.5, 97).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
+        g.style.top = rnd(-3, 95).toFixed(2) + '%';
         g.style.fontSize = Math.round(size) + 'px';
-        g.style.setProperty('--r', rnd(-24, 24).toFixed(1) + 'deg');
+        g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
         g.style.color = pick(COLORS);
-        g.style.opacity = rnd(0.13, 0.28).toFixed(2);
-        g.style.filter = 'blur(' + rnd(0.3, 1.6).toFixed(1) + 'px)';
+        g.style.opacity = rnd(0.10, 0.24).toFixed(2);    // za textem/modelkou raději jemnější
+        g.style.filter = 'blur(' + rnd(0.3, 1.5).toFixed(1) + 'px)';
         if (!reduceMotion) {
           g.style.animationName = pick(ANIMS);
-          g.style.animationDuration = Math.round(rnd(15, 36)) + 's';
+          g.style.animationDuration = Math.round(rnd(13, 32)) + 's';
           g.style.animationDelay = '-' + Math.round(rnd(0, 30)) + 's';
         }
-        layer.appendChild(g);
-        made++;
+        frag.appendChild(g);
       }
+      layer.appendChild(frag);
     }
 
     build();

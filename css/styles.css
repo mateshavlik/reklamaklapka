@@ -171,12 +171,13 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;
 }
 /* poloha, velikost, barva, rotace, animace se nastavují inline z js/main.js (chytrý scatter mimo text a modelku) */
-@keyframes glyDriftA{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(14px,-26px,0) rotate(calc(var(--r,0deg) + 7deg))}}
-@keyframes glyDriftB{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(-26px,-14px,0) rotate(calc(var(--r,0deg) - 6deg))}}
-@keyframes glyDriftC{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(12px,26px,0) rotate(calc(var(--r,0deg) + 8deg))}}
-@keyframes glyDriftD{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(-20px,22px,0) rotate(calc(var(--r,0deg) - 9deg))}}
-@keyframes glyDriftE{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(28px,10px,0) rotate(calc(var(--r,0deg) + 5deg))}}
-@keyframes glyDriftF{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(-16px,-24px,0) rotate(calc(var(--r,0deg) + 10deg))}}
+/* pohyb + rotace + pulzování velikosti (scale) – část glyfů roste, část se zmenšuje */
+@keyframes glyDriftA{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1)}to{transform:translate3d(18px,-34px,0) rotate(calc(var(--r,0deg) + 9deg)) scale(1.26)}}
+@keyframes glyDriftB{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1.18)}to{transform:translate3d(-34px,-18px,0) rotate(calc(var(--r,0deg) - 8deg)) scale(0.88)}}
+@keyframes glyDriftC{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1)}to{transform:translate3d(16px,34px,0) rotate(calc(var(--r,0deg) + 11deg)) scale(1.32)}}
+@keyframes glyDriftD{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1.14)}to{transform:translate3d(-28px,28px,0) rotate(calc(var(--r,0deg) - 12deg)) scale(0.9)}}
+@keyframes glyDriftE{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(0.95)}to{transform:translate3d(38px,14px,0) rotate(calc(var(--r,0deg) + 7deg)) scale(1.22)}}
+@keyframes glyDriftF{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1.1)}to{transform:translate3d(-20px,-32px,0) rotate(calc(var(--r,0deg) + 14deg)) scale(0.85)}}
 @media (prefers-reduced-motion:reduce){.gly{animation:none!important;transform:rotate(var(--r,0deg))}}
 .hero__title{font-size:clamp(2.6rem,1.3rem + 5.1vw,4.9rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:1.5rem}
 .hero__title .hl{color:var(--brand)}
