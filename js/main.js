@@ -388,7 +388,7 @@
         g.style.filter = 'blur(' + rnd(0.3, 1.5).toFixed(1) + 'px)';
         if (!reduceMotion) {
           g.style.animationName = pick(ANIMS);
-          g.style.animationDuration = Math.round(rnd(13, 32)) + 's';
+          g.style.animationDuration = Math.round(rnd(7, 18)) + 's';
           g.style.animationDelay = '-' + Math.round(rnd(0, 30)) + 's';
         }
         frag.appendChild(g);
