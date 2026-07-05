@@ -366,23 +366,26 @@
     const COLORS = ['#E40615', '#2b3a8f', '#1f9d61', '#e8a11c', '#8a2be2', '#e6357a', '#12a5b0', '#f2662d'];
     const ANIMS = ['glyDriftA', 'glyDriftB', 'glyDriftC', 'glyDriftD', 'glyDriftE', 'glyDriftF'];
     // pevné počty na vodorovné zóny (stabilní poměr při každém načtení):
-    // levá jen mírně míň než dřív, pravá výrazně plnější – hlavně daleko vpravo (viditelný karamel)
+    // levá 65 % tlačená spíš dolů, střed doplněný z pravé strany, pravá plnější
     const ZONES = [
-      { n: 22, min: -2.5, max: 46 },  // levá
-      { n: 14, min: 47, max: 80 },    // střed-pravá (část za modelkou)
-      { n: 24, min: 80, max: 99 },    // daleko vpravo
+      { n: 22, min: -2.5, max: 46, lowFrac: 0.65 },  // levá – 65 % spíš níž
+      { n: 3, min: 40, max: 62 },                     // střed – doplnit prázdná místa (přesun zprava)
+      { n: 14, min: 47, max: 80 },                    // střed-pravá (část za modelkou)
+      { n: 21, min: 80, max: 99 },                    // daleko vpravo (−3 přesunuty do středu)
     ];
 
     const rnd = (a, b) => a + Math.random() * (b - a);
     const pick = (arr) => arr[(Math.random() * arr.length) | 0];
 
-    function makeGlyph(xMin, xMax) {
+    function makeGlyph(xMin, xMax, lowFrac) {
       const size = rnd(24, 122);
       const g = document.createElement('span');
       g.className = 'gly';
       g.textContent = pick(CHARS);
       g.style.left = rnd(xMin, xMax).toFixed(2) + '%';   // lehký přesah přes okraje = přirozenější
-      g.style.top = rnd(-3, 95).toFixed(2) + '%';
+      // část zóny lze zatlačit spíš k dolní části hero
+      const top = (lowFrac && Math.random() < lowFrac) ? rnd(45, 95) : rnd(-3, 95);
+      g.style.top = top.toFixed(2) + '%';
       g.style.fontSize = Math.round(size) + 'px';
       g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
       g.style.color = pick(COLORS);
@@ -400,7 +403,7 @@
       layer.innerHTML = '';
       if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
       const frag = document.createDocumentFragment();
-      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z.min, z.max)); });
+      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z.min, z.max, z.lowFrac)); });
       layer.appendChild(frag);
     }
 
