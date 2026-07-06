@@ -432,7 +432,15 @@
     }
 
     build();
-    let rt;
-    window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 250); }, { passive: true });
+    // Přestavuj JEN při změně šířky. Na mobilu se resize spouští i při scrollu
+    // (schování/zobrazení adresního řádku mění výšku) – to bychom nesměli přestavovat,
+    // jinak se glyfy vytvoří znovu a animace „naskočí" na začátek (efekt restartu).
+    let lastW = window.innerWidth, rt;
+    window.addEventListener('resize', () => {
+      if (Math.abs(window.innerWidth - lastW) < 24) return; // jen výška → ignorovat
+      lastW = window.innerWidth;
+      clearTimeout(rt);
+      rt = setTimeout(build, 250);
+    }, { passive: true });
   })();
 })();
