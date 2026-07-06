@@ -374,8 +374,18 @@
       { n: 21, min: 80, max: 99 },                        // daleko vpravo
     ];
 
-    const rnd = (a, b) => a + Math.random() * (b - a);
-    const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+    // deterministický generátor (mulberry32) → stejné rozmístění při každém načtení;
+    // mění se jen pohyb (CSS animace). Seed se resetuje na začátku build().
+    const SEED = 20260706;
+    let s = SEED;
+    const rand = () => {
+      s |= 0; s = (s + 0x6D2B79F5) | 0;
+      let t = Math.imul(s ^ (s >>> 15), 1 | s);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+    const rnd = (a, b) => a + rand() * (b - a);
+    const pick = (arr) => arr[(rand() * arr.length) | 0];
 
     function makeGlyph(z) {
       const size = rnd(24, 122);
@@ -386,7 +396,7 @@
       // svislé umístění: volitelný rozsah zóny, nebo tlačit spíš dolů (lowFrac)
       const yMin = z.yMin != null ? z.yMin : -3;
       const yMax = z.yMax != null ? z.yMax : 95;
-      const top = (z.lowFrac && Math.random() < z.lowFrac) ? rnd(45, 95) : rnd(yMin, yMax);
+      const top = (z.lowFrac && rand() < z.lowFrac) ? rnd(45, 95) : rnd(yMin, yMax);
       g.style.top = top.toFixed(2) + '%';
       g.style.fontSize = Math.round(size) + 'px';
       g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
@@ -402,6 +412,7 @@
     }
 
     function build() {
+      s = SEED;               // reset → identické rozmístění pokaždé (i po resize)
       layer.innerHTML = '';
       if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
       const frag = document.createDocumentFragment();
