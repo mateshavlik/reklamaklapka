@@ -483,7 +483,6 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .hero__trust{grid-column:1 / -1;grid-row:4}
   .hero__img{width:100%;margin:0;filter:none;-webkit-mask-image:none;mask-image:none}  /* čistý cutout, bez jank/„okénka" */
   .hero__blob{display:none}
-  .hero__glyphs{display:none}  /* na tabletu/mobilu je hero těsné – glyfy jen na desktopu */
 
   .trust__grid{grid-template-columns:1fr 1fr;gap:1.3rem}
   .timeline{grid-template-columns:1fr 1fr;gap:2rem}

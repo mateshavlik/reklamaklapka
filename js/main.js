@@ -389,8 +389,9 @@
     const rnd = (a, b) => a + rand() * (b - a);
     const pick = (arr) => arr[(rand() * arr.length) | 0];
 
-    function makeGlyph(z) {
-      const size = rnd(24, 122);
+    function makeGlyph(z, scale, blurMul) {
+      // POZOR: pořadí volání rand() nesmět měnit (jinak se změní desktopové rozmístění).
+      const size = rnd(24, 122) * scale;                   // menší glyfy na menších displejích
       const g = document.createElement('span');
       g.className = 'gly';
       g.textContent = pick(CHARS);
@@ -404,7 +405,7 @@
       g.style.setProperty('--r', rnd(-26, 26).toFixed(1) + 'deg');
       g.style.color = pick(COLORS);
       g.style.opacity = rnd(0.10, 0.24).toFixed(2);      // za textem/modelkou raději jemnější
-      g.style.filter = 'blur(' + rnd(0.3, 1.5).toFixed(1) + 'px)';
+      g.style.filter = 'blur(' + (rnd(0.3, 1.5) * blurMul).toFixed(1) + 'px)';  // na mobilu tlumenější (výkon)
       if (!reduceMotion) {
         g.style.animationName = pick(ANIMS);
         g.style.animationDuration = Math.round(rnd(7, 18)) + 's';
@@ -416,9 +417,17 @@
     function build() {
       s = SEED;               // reset → identické rozmístění pokaždé (i po resize)
       layer.innerHTML = '';
-      if (window.innerWidth <= 1040) return; // na tabletu/mobilu je hero těsné (CSS to i schovává)
+      const W = hero.getBoundingClientRect().width || window.innerWidth;
+      if (W < 320) return;    // extrémně úzké – přeskočit
+      // desktop = 1:1 jako dřív; menší displeje → menší glyfy, menší hustota, tlumenější blur
+      const scale = Math.max(0.42, Math.min(1, W / 1400));
+      const density = Math.max(0.55, Math.min(1, W / 1400));
+      const blurMul = W <= 1040 ? 0.5 : 1;
       const frag = document.createDocumentFragment();
-      ZONES.forEach((z) => { for (let i = 0; i < z.n; i++) frag.appendChild(makeGlyph(z)); });
+      ZONES.forEach((z) => {
+        const n = Math.round(z.n * density);
+        for (let i = 0; i < n; i++) frag.appendChild(makeGlyph(z, scale, blurMul));
+      });
       layer.appendChild(frag);
     }
 
