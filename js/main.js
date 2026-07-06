@@ -372,6 +372,8 @@
       { n: 11, min: 42, max: 64, yMin: 0, yMax: 60 },     // střed mezi nadpisem a hlavou – víc glyfů, spíš horní část
       { n: 14, min: 47, max: 80 },                        // střed-pravá (část za modelkou)
       { n: 21, min: 80, max: 99 },                        // daleko vpravo
+      // POZOR: nové zóny přidávej na KONEC – stávající rozmístění (seed) tím zůstane stejné
+      { n: 7, min: -2.5, max: 44, yMin: 0, yMax: 42 },    // levá horní část – přidané glyfy
     ];
 
     // deterministický generátor (mulberry32) → stejné rozmístění při každém načtení;
