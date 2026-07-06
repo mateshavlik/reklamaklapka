@@ -462,14 +462,58 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 }
 /* Navigace se sbalí do hamburgeru dřív (kvůli šířce s CTA „Volné reklamní plochy") */
 @media (max-width:1240px){
-  .nav{position:fixed;inset:var(--header-h) 0 auto 0;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);transform:translateY(-130%);transition:transform .35s var(--ease);max-height:calc(100vh - var(--header-h));overflow-y:auto}
-  .nav.is-open{transform:none}
-  .nav__list{flex-direction:column;align-items:stretch;gap:0;padding:.6rem 1rem 1.2rem}
-  .nav__link{padding:.9rem .6rem;border-radius:0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  /* ——— Prémiové mobilní menu (jen ≤1240 px; desktop beze změny) ——— */
+  .nav{
+    position:fixed;inset:calc(var(--header-h) - 4px) 10px auto 10px;
+    background:rgba(255,252,248,.99);
+    -webkit-backdrop-filter:saturate(150%) blur(14px);backdrop-filter:saturate(150%) blur(14px);
+    border:1px solid var(--line);border-radius:22px;padding:.5rem;
+    box-shadow:0 26px 60px -14px rgba(34,22,12,.30),0 6px 16px rgba(34,22,12,.08);
+    max-height:calc(100vh - var(--header-h) - 24px);max-height:calc(100dvh - var(--header-h) - 24px);
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+    transform:translateY(-12px) scale(.98);transform-origin:top center;
+    opacity:0;visibility:hidden;pointer-events:none;
+    transition:transform .38s var(--ease),opacity .28s ease,visibility .38s}
+  .nav.is-open{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+  .nav__list{flex-direction:column;align-items:stretch;gap:.12rem;padding:.35rem}
+  .nav__link{
+    display:flex;align-items:center;
+    padding:.95rem 1.05rem;border:none;border-radius:14px;
+    font-size:1.12rem;font-weight:600;color:var(--ink);letter-spacing:-.01em;
+    opacity:0;transform:translateY(-6px);
+    transition:opacity .3s ease,transform .3s var(--ease),background .2s,color .2s}
+  .nav.is-open .nav__link{opacity:1;transform:none}
+  .nav.is-open .nav__list li:nth-child(1) .nav__link{transition-delay:.05s}
+  .nav.is-open .nav__list li:nth-child(2) .nav__link{transition-delay:.09s}
+  .nav.is-open .nav__list li:nth-child(3) .nav__link{transition-delay:.13s}
+  .nav.is-open .nav__list li:nth-child(4) .nav__link{transition-delay:.17s}
+  .nav.is-open .nav__list li:nth-child(5) .nav__link{transition-delay:.21s}
+  .nav.is-open .nav__list li:nth-child(6) .nav__link{transition-delay:.25s}
+  .nav.is-open .nav__list li:nth-child(7) .nav__link{transition-delay:.29s}
+  .nav.is-open .nav__list li:nth-child(8) .nav__link{transition-delay:.33s}
+  .nav.is-open .nav__list li:nth-child(9) .nav__link{transition-delay:.37s}
   .nav__link::after{display:none}
-  .nav__link.is-active{color:var(--brand)}
-  .nav__link--ghost,.nav__link--cta{margin:.7rem auto 0;border:none;border-radius:var(--pill);background:var(--brand);color:#fff;text-align:center;max-width:280px;box-shadow:none}
+  .nav__link:active{transform:scale(.985)}
+  .nav__link:hover,.nav__link:focus-visible{background:var(--surface-2);color:var(--ink)}
+  .nav__link.is-active{color:var(--brand);background:rgba(228,6,21,.08);font-weight:700}
+  /* oddělovač před tlačítky (Fotobanka + Volné plochy) */
+  .nav__list li:nth-last-child(2){margin-top:.5rem;padding-top:.6rem;border-top:1px solid var(--line)}
+  .nav__link--ghost,.nav__link--cta{
+    justify-content:center;margin:.32rem 0 0;border-radius:14px;
+    font-weight:700;font-size:1.08rem;padding:1rem;text-align:center;max-width:none;
+    opacity:0;transform:translateY(-6px)}
+  .nav__link--ghost{background:var(--brand-soft);color:var(--brand);box-shadow:none}
+  .nav__link--ghost:hover,.nav__link--ghost:focus-visible{background:var(--brand);color:#fff}
+  .nav__link--cta{background:var(--brand);color:#fff;box-shadow:0 12px 24px -8px rgba(228,6,21,.55)}
+  .nav__link--cta:hover,.nav__link--cta:focus-visible{background:var(--brand-dark);color:#fff}
+  /* ztmavení a rozostření pozadí za otevřeným menu */
+  body::before{content:"";position:fixed;inset:0;z-index:90;background:rgba(28,18,10,.42);
+    -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+    opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s ease,visibility .35s}
+  body.nav-open::before{opacity:1;visibility:visible;pointer-events:auto}
+  body.nav-open{overflow:hidden}
   .nav-toggle{display:flex}
+  .nav-toggle[aria-expanded="true"]{background:var(--surface-2);border-color:var(--brand-soft)}
 }
 @media (max-width:1040px){
   /* Mobil: paní vpravo NAHOŘE vedle nadpisu+textu; CTA a statistiky na plnou šířku pod tím */
