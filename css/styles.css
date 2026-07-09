@@ -409,6 +409,10 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 .footer__col li,.footer__col a{color:var(--ink-2);font-size:.95rem;transition:color .2s}
 .footer__col a:hover{color:var(--brand)}
 .footer__bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;padding-block:1.4rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.footer__bottom>p:last-child{text-align:right}
+.footer__credit{display:inline-block;margin-top:.3rem;font-size:.8rem;opacity:.9}
+.footer__credit a{color:var(--brand);font-weight:600;transition:color .2s}
+.footer__credit a:hover,.footer__credit a:focus-visible{color:var(--brand-dark);text-decoration:underline}
 
 /* =========================================================
    LIGHTBOX
@@ -545,6 +549,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .form__row{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr;gap:1.6rem}
   .footer__bottom{flex-direction:column;text-align:center}
+  .footer__bottom>p:last-child{text-align:center}
   .trust__grid{grid-template-columns:1fr}
   .lightbox__nav{width:46px;height:46px;font-size:1.8rem}
 }
