@@ -180,6 +180,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 @keyframes glyDriftF{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1.4)}to{transform:translate3d(-24px,-36px,0) rotate(calc(var(--r,0deg) + 15deg)) scale(0.68)}}
 @media (prefers-reduced-motion:reduce){.gly{animation:none!important;transform:rotate(var(--r,0deg))}}
 .hero__title{font-size:clamp(2.6rem,1.3rem + 5.1vw,4.9rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:1.5rem}
+.hero__title .kt{letter-spacing:-.005em}  /* jen „k" v „kterou" – lokálně uvolní proklad, aby se nedotýkalo „t" (jinde zůstává sevřené) */
 .hero__title .hl{color:var(--brand)}
 .hero__lead{font-size:clamp(1.08rem,1rem + .4vw,1.3rem);color:var(--ink-2);max-width:31em;margin-bottom:2.2rem}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2.4rem}
@@ -500,8 +501,6 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .nav__link:active{transform:scale(.985)}
   .nav__link:hover,.nav__link:focus-visible{background:var(--surface-2);color:var(--ink)}
   .nav__link.is-active{color:var(--brand);background:rgba(228,6,21,.08);font-weight:700}
-  /* oddělovač před Fotobankou (jediný accent na konci menu) */
-  .nav__list li:last-child{margin-top:.5rem;padding-top:.6rem;border-top:1px solid var(--line)}
   .nav__link--ghost,.nav__link--cta{
     justify-content:center;margin:.32rem 0 0;border-radius:14px;
     font-weight:700;font-size:1.08rem;padding:1rem;text-align:center;max-width:none;
