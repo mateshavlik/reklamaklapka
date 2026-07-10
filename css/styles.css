@@ -179,7 +179,7 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
 @keyframes glyDriftE{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(0.8)}to{transform:translate3d(42px,16px,0) rotate(calc(var(--r,0deg) + 8deg)) scale(1.45)}}
 @keyframes glyDriftF{from{transform:translate3d(0,0,0) rotate(var(--r,0deg)) scale(1.4)}to{transform:translate3d(-24px,-36px,0) rotate(calc(var(--r,0deg) + 15deg)) scale(0.68)}}
 @media (prefers-reduced-motion:reduce){.gly{animation:none!important;transform:rotate(var(--r,0deg))}}
-.hero__title{font-size:clamp(2.6rem,1.3rem + 5.1vw,4.9rem);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin-bottom:1.5rem}
+.hero__title{font-size:clamp(2.6rem,1.3rem + 5.1vw,4.9rem);line-height:1.08;letter-spacing:-.035em;font-weight:800;margin-bottom:1.5rem}
 .hero__title .kt{letter-spacing:-.005em}  /* jen „k" v „kterou" – lokálně uvolní proklad, aby se nedotýkalo „t" (jinde zůstává sevřené) */
 .hero__title .hl{color:var(--brand)}
 .hero__lead{font-size:clamp(1.08rem,1rem + .4vw,1.3rem);color:var(--ink-2);max-width:31em;margin-bottom:2.2rem}
