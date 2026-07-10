@@ -500,8 +500,8 @@ section[id]{scroll-margin-top:calc(var(--header-h) + 14px)}
   .nav__link:active{transform:scale(.985)}
   .nav__link:hover,.nav__link:focus-visible{background:var(--surface-2);color:var(--ink)}
   .nav__link.is-active{color:var(--brand);background:rgba(228,6,21,.08);font-weight:700}
-  /* oddělovač před tlačítky (Fotobanka + Volné plochy) */
-  .nav__list li:nth-last-child(2){margin-top:.5rem;padding-top:.6rem;border-top:1px solid var(--line)}
+  /* oddělovač před Fotobankou (jediný accent na konci menu) */
+  .nav__list li:last-child{margin-top:.5rem;padding-top:.6rem;border-top:1px solid var(--line)}
   .nav__link--ghost,.nav__link--cta{
     justify-content:center;margin:.32rem 0 0;border-radius:14px;
     font-weight:700;font-size:1.08rem;padding:1rem;text-align:center;max-width:none;
